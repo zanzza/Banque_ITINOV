@@ -18,6 +18,9 @@ public class Compte {
     @OneToMany(mappedBy = "compte")
     private List<Operation> operations;
 
+    @ManyToOne
+    private Client client;
+
     public void ajouterMontant(double montant) {
         this.solde += montant;
     }
@@ -68,5 +71,13 @@ public class Compte {
 
     public void setOperations(List<Operation> operations) {
         this.operations = operations;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 }

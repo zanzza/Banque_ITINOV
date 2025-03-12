@@ -12,7 +12,7 @@ public class Client {
 
     private String numeroClient;
 
-    @OneToMany
+    @OneToMany(mappedBy = "client")
     private List<Compte> comptes;
 
     public Long getId() {
