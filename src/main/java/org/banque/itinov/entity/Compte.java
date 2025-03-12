@@ -88,8 +88,6 @@ public class Compte {
                 ", numeroCompte='" + numeroCompte + '\'' +
                 ", solde=" + solde +
                 ", decouvertAutorise=" + decouvertAutorise +
-                ", operations=" + operations +
-                ", client=" + client +
                 '}';
     }
 }
