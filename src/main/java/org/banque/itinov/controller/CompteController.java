@@ -1,5 +1,6 @@
 package org.banque.itinov.controller;
 import org.banque.itinov.entity.Operation;
+import org.banque.itinov.service.ClientService;
 import org.banque.itinov.service.CompteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +14,17 @@ public class CompteController {
     @Autowired
     private CompteService compteService;
 
+    @Autowired
+    private ClientService clientService;
+
     @GetMapping("/{numeroCompte}")
     public String getCompte(@PathVariable String numeroCompte) {
-        // Retourne le solde et d'autres informations du compte
-        return "Solde du compte " + numeroCompte + ": " + compteService.getCompte(numeroCompte).getSolde();
+        return compteService.getCompte(numeroCompte).toString();
+    }
+
+    @GetMapping("/{numeroClient}")
+    public String getComptes(@PathVariable String numeroClient) {
+        return clientService.getComptes(numeroClient).stream().toList().toString();
     }
 
     @PostMapping("/deposer")

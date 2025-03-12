@@ -30,4 +30,12 @@ public class Client {
     public void setNumeroClient(String numeroClient) {
         this.numeroClient = numeroClient;
     }
+
+    public List<Compte> getComptes() {
+        return comptes;
+    }
+
+    public void setComptes(List<Compte> comptes) {
+        this.comptes = comptes;
+    }
 }
