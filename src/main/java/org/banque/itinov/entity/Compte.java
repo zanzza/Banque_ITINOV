@@ -26,7 +26,7 @@ public class Compte {
     }
 
     public boolean retirerMontant(double montant) {
-        if (this.solde - montant < - decouvertAutorise) {
+        if (this.solde - montant <- decouvertAutorise) {
             return false;  // Retrait refusé
         }
         this.solde -= montant;
@@ -79,5 +79,17 @@ public class Compte {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    @Override
+    public String toString() {
+        return "Compte{" +
+                "id=" + id +
+                ", numeroCompte='" + numeroCompte + '\'' +
+                ", solde=" + solde +
+                ", decouvertAutorise=" + decouvertAutorise +
+                ", operations=" + operations +
+                ", client=" + client +
+                '}';
     }
 }
