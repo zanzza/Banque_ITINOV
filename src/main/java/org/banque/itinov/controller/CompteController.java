@@ -1,4 +1,6 @@
 package org.banque.itinov.controller;
+import org.banque.itinov.dto.ClientDTO;
+import org.banque.itinov.entity.Client;
 import org.banque.itinov.entity.Operation;
 import org.banque.itinov.service.ClientService;
 import org.banque.itinov.service.CompteService;
@@ -8,23 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/comptes")
+@RequestMapping("/api/compte")
 public class CompteController {
 
     @Autowired
     private CompteService compteService;
 
-    @Autowired
-    private ClientService clientService;
-
     @GetMapping("/{numeroCompte}")
     public String getCompte(@PathVariable String numeroCompte) {
         return compteService.getCompte(numeroCompte).toString();
-    }
-
-    @GetMapping("/{numeroClient}")
-    public String getComptes(@PathVariable String numeroClient) {
-        return clientService.getComptes(numeroClient).stream().toList().toString();
     }
 
     @PostMapping("/deposer")

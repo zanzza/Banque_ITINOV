@@ -26,7 +26,7 @@ public class Compte {
     }
 
     public boolean retirerMontant(double montant) {
-        if (this.solde - montant <- decouvertAutorise) {
+        if (this.solde - montant < -decouvertAutorise) {
             return false;  // Retrait refusé
         }
         this.solde -= montant;
