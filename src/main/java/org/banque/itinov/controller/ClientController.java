@@ -16,7 +16,7 @@ import java.util.List;
 public class ClientController {
 
     @Autowired
-    private ClientService clientService;
+    ClientService clientService;
 
     @GetMapping("/{numeroClient}")
     public List<CompteDTO> getComptes(@PathVariable String numeroClient) {
