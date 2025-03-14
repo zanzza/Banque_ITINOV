@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="2" author="ghu">
+        <insert tableName="client">
+            <column name="numero_client" value="01"/>
+        </insert>
+
+
+        <insert tableName="client">
+            <column name="numero_client" value="02"/>
+        </insert>
+
+        <insert tableName="compte">
+            <column name="numero_compte" value="01"/>
+            <column name="solde" value="2000"/>
+            <column name="decouvert_autorise" value="500"/>
+            <column name="client_id" value="1"/>
+        </insert>
+
+        <insert tableName="compte">
+            <column name="numero_compte" value="02"/>
+            <column name="solde" value="2000"/>
+            <column name="decouvert_autorise" value="500"/>
+            <column name="client_id" value="1"/>
+        </insert>
+
+
+        <insert tableName="compte">
+            <column name="numero_compte" value="03"/>
+            <column name="solde" value="2000"/>
+            <column name="decouvert_autorise" value="500"/>
+            <column name="client_id" value="2"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

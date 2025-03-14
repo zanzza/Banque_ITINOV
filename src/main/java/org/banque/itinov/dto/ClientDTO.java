@@ -1,7 +1,5 @@
 package org.banque.itinov.dto;
 
-import java.util.List;
-
 public class ClientDTO {
     private String numeroClient;
 
