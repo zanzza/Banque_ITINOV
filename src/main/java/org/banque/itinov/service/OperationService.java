@@ -39,8 +39,6 @@ public class OperationService {
         operation.setDate(new Date());
         operation.setType("Dépôt");
         operation.setMontant(montant);
-        operation.setSoldeAvant(compte.getSolde() - montant);
-        operation.setSoldeApres(compte.getSolde());
         operation.setCompte(compte);
 
         Operation operationSaved = operationRepository.save(operation);
@@ -59,8 +57,6 @@ public class OperationService {
         operation.setDate(new Date());
         operation.setType("Retrait");
         operation.setMontant(montant);
-        operation.setSoldeAvant(compte.getSolde() + montant);
-        operation.setSoldeApres(compte.getSolde());
         operation.setCompte(compte);
 
         Operation operationSaved = operationRepository.save(operation);

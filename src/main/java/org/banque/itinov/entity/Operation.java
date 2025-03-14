@@ -13,8 +13,6 @@ public class Operation {
     private Date date;
     private String type; // "Dépôt", "Retrait", "Virement"
     private double montant;
-    private double soldeAvant;
-    private double soldeApres;
 
     @ManyToOne
     private Compte compte;
@@ -49,22 +47,6 @@ public class Operation {
 
     public void setMontant(double montant) {
         this.montant = montant;
-    }
-
-    public double getSoldeAvant() {
-        return soldeAvant;
-    }
-
-    public void setSoldeAvant(double soldeAvant) {
-        this.soldeAvant = soldeAvant;
-    }
-
-    public double getSoldeApres() {
-        return soldeApres;
-    }
-
-    public void setSoldeApres(double soldeApres) {
-        this.soldeApres = soldeApres;
     }
 
     public Compte getCompte() {
